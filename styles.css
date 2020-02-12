@@ -16,19 +16,19 @@ span {
 }
 
 .btn-primary {
-	padding: 10px;
+	padding: 15px;
 	background-color: #1DC85A;
 	font-family: Sans-Serif;
 	color: black;
 	text-decoration: none;
-	font-size: 20px;
-	border-radius: 8px;
+	font-size: 25px;
+	border-radius: 15px;
 }
 
 .text {
 	font-family: Sans-Serif;
 	color: black;
-	font-size: 17px;
+	font-size: 25px;
 	margin-bottom: 40px;
 	margin-top: 70px;
 }
