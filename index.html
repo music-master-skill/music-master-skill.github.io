@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<script language="javascript" type="text/javascript">
+	var urlarguments = window.location.search; 
+	openPage = function() {
+	location.href = "https://accounts.spotify.com/authorize/"+urlarguments;
+	}
+</script>
+	
+<div align="center" id="col-md-12">
+				<a class="btn btn-primary" target="_self" href="javascript:openPage()">Spotify Account verbinden</a>
+</div>
+
+</body>
+</html>
