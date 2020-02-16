@@ -7,7 +7,7 @@
 <div id="column-content">
 
   <img src="music_master_high1.png">
-  <span><b>Music Master für Spotify</b></span>
+  <span><b>Music Master for Spotify</b></span>
 </div>
 
 <link rel="stylesheet" href="styles.css">
@@ -18,15 +18,32 @@
 
 <script language="javascript" type="text/javascript">
 	var urlarguments = window.location.search; 
+	
 	openPage = function() {
 	location.href = "https://accounts.spotify.com/authorize/"+urlarguments;
 	}
+	
+	getText = function() {
+		var language = window.navigator.userLanguage || window.navigator.language;
+		if (language.search("de") == 0){
+			document.getElementById("text_display").innerHTML = "Um den Skill Music Master verwenden zu können, <br> müssen sie ihren Spotify Account verbinden.";
+			document.getElementById("button").innerHTML = "Spotify Account verbinden";
+		}
+		else{
+			document.getElementById("text_display").innerHTML = "To use the skill Music Master, <br> you have to connect your Spotify account.";
+			document.getElementById("button").innerHTML = "Connect Spotify account";
+		}
+	}
+	
+	document.addEventListener("DOMContentLoaded", function() {
+		getText();
+	});
 </script>
 	
 
 <div align="center">
-	<p class="text"> Um den Skill Music Master verwenden zu können, <br> müssen sie ihren Spotify Account verbinden. </p>
-	<a class="btn-primary" target="_self" href="javascript:openPage()">Spotify Account verbinden</a>
+	<p class="text" id="text_display" > Um den Skill Music Master verwenden zu können, <br> müssen sie ihren Spotify Account verbinden. </p>
+	<a class="btn-primary" target="_self" href="javascript:openPage()" id="button">Spotify Account verbinden</a>
 </div>
 
 </body>
